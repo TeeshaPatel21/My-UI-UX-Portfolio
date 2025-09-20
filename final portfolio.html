@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teesha Patel - UX/UI Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a1a1a;
+            line-height: 1.6;
+            color: #f0f0f0;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 900px;
+        }
+        .header-bg {
+            background-image: linear-gradient(to right, #34d399, #0ea5e9);
+            border-bottom-left-radius: 4rem;
+            border-bottom-right-radius: 4rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 2;
+        }
+        .header-title {
+            font-family: 'Playfair Display', serif;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+        }
+        .card {
+            background-color: #2a2a2a;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            transition: all 0.4s ease-in-out;
+            transform: translateY(0);
+        }
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+        }
+        .project-image-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            border: 2px solid #34d399;
+        }
+        .project-image {
+            transition: transform 0.6s ease-in-out;
+        }
+        .card:hover .project-image {
+            transform: scale(1.05);
+        }
+        .animate-in {
+            animation: slideIn 1s ease-in-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-in-delay-1 { animation-delay: 0.3s; }
+        .animate-in-delay-2 { animation-delay: 0.6s; }
+        .animate-in-delay-3 { animation-delay: 0.9s; }
+        .text-accent {
+            color: #34d399;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <main class="container mx-auto p-6 md:p-12">
+
+        <!-- Header Section -->
+        <header class="text-center mb-16 header-bg p-12 text-white rounded-b-3xl">
+            <div class="animate-in animate-in-delay-1">
+                <h1 class="header-title text-5xl md:text-7xl font-bold tracking-tight">Teesha Patel</h1>
+                <h2 class="text-xl md:text-3xl font-light opacity-90 mt-4">UX/UI Design Portfolio</h2>
+            </div>
+        </header>
+
+        <!-- About Me Section -->
+        <section id="about" class="mb-24 p-10 card animate-in animate-in-delay-2">
+            <h3 class="text-3xl font-bold mb-4 text-accent">About Me</h3>
+            <p class="text-gray-400 leading-relaxed">I am an aspiring UI/UX designer and student, focused on applying user-centered principles to real-world challenges. This portfolio showcases my approach to problem-solving through personal projects. My work demonstrates an ability to research user needs, analyze a problem, and design thoughtful solutions that prioritize the user.</p>
+        </section>
+
+        <!-- Projects & Case Studies Section -->
+        <section id="projects">
+            <h3 class="text-3xl font-bold mb-12 animate-in animate-in-delay-3 text-accent">Projects & Case Studies</h3>
+
+            <!-- Project 1: E-commerce App Design -->
+            <div class="mb-12 p-8 card animate-in animate-in-delay-3">
+                <h4 class="text-2xl font-bold mb-6 text-gray-100">Case Study: E-commerce App Design - The Perfect User Flow</h4>
+                <div class="md:flex md:space-x-10 items-center">
+                    <div class="md:w-1/2 mb-6 md:mb-0 project-image-wrapper">
+                        <img src="updated p1.webp" alt="Final project mockup for e-commerce app" class="w-full h-auto project-image">
+                    </div>
+                    <div class="md:w-1/2 text-gray-400">
+                        <p class="mb-4">
+                            <strong class="font-bold text-gray-200">Problem (UX):</strong> Most e-commerce apps have cluttered designs and confusing checkout processes. This leads to user frustration and abandoned carts. Users need a simple, intuitive, and visually pleasing way to shop online.
+                        </p>
+                        <p class="mb-4">
+                            <strong class="font-bold text-gray-200">Proposed Solution (UI/UX):</strong> I designed a clean, minimalist UI with a logical user flow that guides users from browsing to checkout effortlessly. My solution focuses on a simple and elegant visual design, combined with a user experience that reduces friction and confusion. This project shows my ability to simplify a complex process and make it visually appealing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Ride-Sharing App Onboarding -->
+            <div class="mb-12 p-8 card animate-in animate-in-delay-3">
+                <h4 class="text-2xl font-bold mb-6 text-gray-100">Case Study: Ride-Sharing App Onboarding - A Seamless First Experience</h4>
+                <div class="md:flex md:space-x-10 items-center">
+                    <div class="md:w-1/2 mb-6 md:mb-0 project-image-wrapper">
+                        <img src="updated p2.webp" alt="Final project mockup for ride-sharing app" class="w-full h-auto project-image">
+                    </div>
+                    <div class="md:w-1/2 text-gray-400">
+                        <p class="mb-4">
+                            <strong class="font-bold text-gray-200">Problem (UX):</strong> Ride-sharing apps often have a frustrating onboarding process with too many fields to fill out. This is a common point of user drop-off. A good user experience should be quick, simple, and friendly.
+                        </p>
+                        <p class="mb-4">
+                            <strong class="font-bold text-gray-200">Proposed Solution (UI/UX):</strong> I designed a streamlined onboarding process that uses a conversational UI approach. The user is guided through the sign-up process one step at a time, with clear instructions and friendly messaging. The UI is clean and modern, using bold visuals and smooth transitions to create a welcoming first impression.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Footer/Contact Section -->
+        <footer class="text-center mt-20 text-gray-500">
+            <p>&copy; 2025 Teesha Patel. All rights reserved.</p>
+        </footer>
+
+    </main>
+</body>
+</html>
